@@ -1,0 +1,351 @@
+body {
+  background-color: #3e3e3e;
+  font: 400 1.125em/1.38 Helvetica;
+  color: rgb(0, 0, 0);
+}
+
+.container {
+  position: relative;
+  float: left;
+  z-index: 11;
+  width: 100%;
+  height: 772px;
+  padding: 22px;
+}
+
+.element {
+  float: left;
+}
+
+.element .element {
+  clear: both;
+  width: 100%;
+  height: 2px;
+  margin-top: 40px;
+}
+
+.element .text {
+  float: left;
+  clear: both;
+  margin: 28px 0 0 47.46325%;
+  font-size: 0.889em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgb(22, 119, 248);
+}
+
+.header {
+  position: relative;
+  float: left;
+  z-index: 15;
+  width: 100%;
+  height: 122px;
+  background-color: rgb(62, 62, 62);
+}
+
+.header .text {
+  display: block;
+  float: left;
+  margin: 18px 0 0 27.06073%;
+  background-color: rgba(187, 214, 227, 0);
+  font-family: Arial;
+  font-size: 2.333em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgb(234, 246, 245);
+}
+
+.image {
+  display: block;
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 14;
+  width: 116px;
+  height: auto;
+  margin: -120px 0 0 1.41667%;
+  overflow: hidden;
+}
+
+.text {
+  line-height: 1.38;
+}
+
+.uniqueitem {
+  display: block;
+  position: relative;
+  float: left;
+  margin-top: -55px;
+  text-shadow: -1px 2px 5px rgba(0, 0, 0, .5);
+  font-size: 1.167em;
+  line-height: 1.38;
+}
+.ontop {
+				z-index: 999;
+				width: 100%;
+				height: 110%;
+				top: 0;
+				box-shadow: -8px 8px 10px 3px rgba(0,0,0,0.2); 
+				font-weight:bold; 
+				left: 0;
+				display: none;
+				position: absolute;				
+				background-color: #cccccc;
+				color: #aaaaaa;
+				opacity: .99;
+				filter: alpha(opacity = 100);
+			}
+			#popup {
+				width: 80%;
+				margin: 0 auto;
+				margin-top:100px;
+				display:block;
+				color: #000000;
+				height:80%;
+				background-color: #ffffff;
+				/* To align popup window at the center of screen*/
+				
+			
+			}
+		
+.first-half {
+	
+padding-left:15%;
+   float:left;
+    
+}
+.second-half {
+	padding-left:15%;
+   float:left;
+   
+}
+.uniqueitem:hover {
+  text-shadow: -1px 2px 5px rgba(0, 0, 0, .5);
+  font-size: 1.278em;
+  color: rgb(231, 11, 11);
+}
+
+._button {
+  display: block;
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 25;
+  width: 9.265625%;
+  height: 49px;
+  margin: 23px 0 0 46.73438%;
+  margin-top : 80px;
+  border-radius: 6px;
+  background-color: rgba(224, 23, 23, 0.85);
+  box-shadow: 4px 4px 5px rgba(13, 13, 13, 0.5);
+  font: 400 1.278em/1.38 'Trebuchet MS';
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+._element {
+  background-color: rgb(222, 222, 222);
+}
+
+._input {
+  display: block;
+  position: relative;
+  float: left;
+  width: 21.3197969543%;
+  padding: 0 10px;
+  border-radius: 5px;
+  background-color: rgb(242, 242, 242);
+  box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;
+  font-size: 1em;
+  line-height: 1.38;
+  letter-spacing: 1px;
+  color: rgb(0, 0, 0);
+}
+#myselect { 
+width:230px; 
+} 
+#myselect option { 
+width:220px; 
+}
+
+._select {
+  display: block;
+  float: left;
+  width: 23.8331518012%;
+  height: 32px;
+  margin-left: 6.4429999999%;
+  padding-left: 10px;
+  border: 1px solid rgb(119, 119, 119);
+  border-radius: 6px;
+  background: url('../images/select-arrows.svg') rgb(242, 242, 242);
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  background-position: right center;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.38;
+  color: rgb(0, 0, 0);
+}
+
+._text {
+  text-align: center;
+}
+
+._textarea {
+  display: block;
+  position: relative;
+  float: left;
+  height: 74px;
+  padding: 5px;
+  border: 1px solid rgb(119, 119, 119);
+  background-color: rgb(242, 242, 242);
+  box-shadow: 1px -3px 5px rgba(0, 0, 0, .5) inset;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.38;
+  color: rgb(0, 0, 0);
+  resize: none;
+}
+
+.container ._container {
+	width: 102.249134948%;
+	height: 803px;
+	margin: -5px 0 0 -0.95156%;
+	border-radius: 7px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: -2px -1px 5px rgba(0,0,0,0.50),5px 3px 5px 6px rgba(5, 4, 4, 0.5);
+	-webkit-box-shadow: -2px -1px 5px rgba(0,0,0,0.50),5px 3px 5px 6px rgba(5, 4, 4, 0.5);
+}
+
+.header ._container {
+  position: relative;
+  float: left;
+  z-index: 13;
+  width: 100%;
+  height: 120px;
+  margin-top: -3px;
+  background: none, none rgb(62, 62, 62);
+  background-repeat: repeat, repeat;
+  background-size: 100% 100%, 100% 100%;
+  background-position: 0% 0%, 0% 0%;
+  background-attachment: scroll, scroll;
+}
+
+.element-1 {
+  position: relative;
+  z-index: 19;
+  width: 97.5%;
+  height: 81px;
+  margin: 15px 0 0 1.41667%;
+  border-radius: 8px;
+}
+
+.text-2 {
+  display: block;
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 16;
+  margin: -43px 0 0 40.76563%;
+  background-color: rgba(187, 214, 227, 0);
+  text-shadow: -2px 1px 5px rgba(13, 219, 240, 0.5);
+  font-family: Arial;
+  font-size: 1.056em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgb(234, 246, 245);
+}
+
+.text-4 {
+  float: right;
+  margin: 40px 38.5% 0 0;
+  font-family: Arial;
+  font-size: 0.833em;
+  font-weight: 400;
+  color: rgb(242, 228, 228);
+}
+
+.uniqueitem-1 {
+  clear: both;
+  z-index: 20;
+  margin-left: 5.08073%;
+  color: rgb(0, 0, 0);
+}
+
+.uniqueitem-2 {
+  z-index: 21;
+  margin-left: 21.91667%;
+  color: rgb(255, 0, 0);
+}
+
+.uniqueitem-3 {
+  z-index: 22;
+  margin-left: 43.1992199999%;
+  color: rgb(0, 0, 0);
+}
+
+.uniqueitem-4 {
+  z-index: 23;
+  margin-left: 65.31641%;
+  color: rgb(0, 0, 0);
+}
+
+.uniqueitem-5 {
+  z-index: 24;
+  margin-left: 81.91667%;
+  color: rgb(0, 0, 0);
+}
+
+._container-4 {
+  float: left;
+  width: 100%;
+  height: 95px;
+  background-color: #3e3e3e;
+}
+
+.element ._input-1 {
+  clear: both;
+  z-index: 3;
+  height: 36px;
+  margin: 53px 0 0 7.36041%;
+}
+
+.element ._input-2 {
+  z-index: 5;
+  height: 37px;
+  margin: 52px 0 0 11.75841%;
+}
+
+.element ._input-3 {
+  z-index: 6;
+  height: 36px;
+  margin: 53px 0 0 10.57133%;
+}
+
+.element ._select-1 {
+  margin-top: 93px;
+}
+
+.element ._select-2 {
+  clear: both;
+  margin-top: 94px;
+}
+
+.element ._textarea-1 {
+  clear: both;
+  z-index: 4;
+  width: 21.6009789288%;
+  margin: 52px 0 0 7.39742%;
+}
+
+.element ._textarea-2 {
+  z-index: 7;
+  width: 21.6003046127%;
+  margin: 55px 0 0 11.45569%;
+}
+
+.element ._textarea-3 {
+  z-index: 8;
+  width: 21.6003046127%;
+  margin: 52px 0 0 10.19723%;
+}

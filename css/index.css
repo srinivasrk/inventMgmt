@@ -1,0 +1,195 @@
+body {
+  background-color: #3e3e3e;
+  font: 400 1.188em/1.38 Arial;
+  color: rgb(94, 44, 44);
+}
+
+.banner {
+  position: relative;
+  float: left;
+  clear: both;
+  width: 98.4974958263%;
+  height: 572px;
+  margin: 87px 0 0 -0.0821700001%;
+  padding: 10px;
+}
+
+.container {
+  position: relative;
+  float: left;
+  z-index: 1;
+  width: 102.5862068965%;
+  height: 543px;
+  margin: 37px 0 0 -0.00135%;
+}
+
+.container .image {
+  width: 1184px;
+  margin: -70px 0 0 0.5028899999%;
+}
+
+.desc {
+  float: right;
+  margin: 32px 4.40517% 0 0;
+  padding: 2px;
+  font-size: 1.368em;
+  font-weight: 700;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(66, 57, 57);
+}
+
+.element {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 7;
+  width: 34.8275862068%;
+  height: 425px;
+  margin: -534px 0 0 1.96121%;
+  border-radius: 7px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 6px 6px 4px 6px rgba(0, 0, 0, .5);
+}
+
+.element .text {
+  margin: 5px 1.88738% 0 0;
+  padding: 2px;
+  font-size: 1em;
+  color: rgb(94, 44, 44);
+}
+
+.header {
+  position: relative;
+  float: left;
+  z-index: 12;
+  width: 100%;
+  height: 120px;
+  background-color: rgb(62, 62, 62);
+}
+
+.image {
+  display: block;
+  float: left;
+  height: auto;
+  overflow: hidden;
+}
+
+.text {
+  line-height: 1.38;
+}
+
+._button {
+  display: block;
+  float: left;
+  clear: both;
+  width: 27.5252525252%;
+  height: 49px;
+  margin: 19px 0 0 34.4098081683%;
+  border-radius: 6px;
+  background-color: rgba(224, 23, 23, 0.85);
+  box-shadow: 4px 4px 5px rgba(13, 13, 13, 0.5);
+  font: 400 1.211em/1.38 'Trebuchet MS';
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+._element {
+  position: relative;
+  float: left;
+  z-index: 14;
+  width: 100%;
+  height: 95px;
+  margin-top: 670px;
+  background-color: #3e3e3e;
+}
+
+._image {
+  position: relative;
+  clear: both;
+  z-index: 11;
+  width: 116px;
+  margin: -123px 0 0 1.41667%;
+}
+
+._input {
+  display: block;
+  float: left;
+  clear: both;
+  width: 63.8888888888%;
+  height: 36px;
+  margin-left: 15.86479%;
+  padding: 0 10px;
+  background-color: rgb(242, 242, 242);
+  font-size: 0.947em;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+._input:focus {
+  border: 2px solid rgb(255, 138, 138);
+}
+
+._text {
+  float: right;
+  clear: both;
+  font-weight: 400;
+  text-align: center;
+}
+
+.text-1 {
+  display: block;
+  float: left;
+  margin: 26px 0 0 28.04544%;
+  background-color: rgba(187, 214, 227, 0);
+  font-size: 2.211em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgb(234, 246, 245);
+}
+
+.text-3 {
+  display: block;
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 13;
+  margin: -40px 0 0 38.58203%;
+  background-color: rgba(187, 214, 227, 0);
+  text-shadow: -2px 1px 5px rgba(13, 219, 240, 0.5);
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgb(234, 246, 245);
+}
+
+.text-4 {
+  position: relative;
+  z-index: 15;
+  margin: -52px 38.08203% 0 0;
+  font-size: 0.789em;
+  color: rgb(242, 228, 228);
+}
+
+.element ._input-1 {
+  margin-top: 25px;
+  line-height: 1.48;
+}
+
+.element ._input-2 {
+  margin-top: 16px;
+  line-height: 1.38;
+}
+
+.header ._container-1 {
+  position: relative;
+  float: left;
+  z-index: 10;
+  width: 100%;
+  height: 120px;
+  background: none, none rgb(62, 62, 62);
+  background-repeat: repeat, repeat;
+  background-size: 100% 100%, 100% 100%;
+  background-position: 0% 0%, 0% 0%;
+  background-attachment: scroll, scroll;
+}
