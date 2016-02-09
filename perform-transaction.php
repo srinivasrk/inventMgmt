@@ -7,19 +7,25 @@
   <link rel="stylesheet" href="css/perform-transaction-grid.css">
   <link rel="stylesheet" href="css/perform-transaction.css">
   <script type="text/javascript">
-			function pop(div) {
-				document.getElementById(div).style.display = 'block';
-			}
-			function hide(div) {
-				document.getElementById(div).style.display = 'none';
-			}
-			//To detect escape button
-			document.onkeydown = function(evt) {
-				evt = evt || window.event;
-				if (evt.keyCode == 27) {
-					hide('popDiv');
-				}
-			};
+		function pop(div) {
+			document.getElementById(div).style.display = 'block';
+		}
+		function hide(div) {
+			document.getElementById(div).style.display = 'none';
+		}
+		//To detect escape button
+		document.onkeydown = function(evt) {
+		evt = evt || window.event;
+		if (evt.keyCode == 27) {
+		var r =confirm("Are you sure you want to stop the current transaction ?");
+		if(r==true)
+		{
+			hide('popDiv');
+		}
+		}
+	};
+			
+			
 		</script>
   <script type="text/javascript">
   var res;
@@ -188,7 +194,7 @@ function checkavail()
 		$res=mysql_select_db("stockmanagement",$cn) or die("Note: " . mysql_error());
 		
 		$res_dept=mysql_query("select * from location;") or die("Note: " . mysql_error());
-		echo " qry executed<br>";	
+			
 		?>
 		<option  style="font-size:14px"  value="Select Location">Select Location</option>
 		<?php
@@ -234,36 +240,94 @@ function checkavail()
 				letter-spacing: 1px;"  > Complete your transaction </h2>
 				<br />
 				<br />
-				
-				<textarea style="font-weight:700; height: 100px;width:400px; border: 1px solid rgb(119, 119, 119);background-color: rgb(242, 242, 242);
-				box-shadow: 1px -3px 5px rgba(0, 0, 0, .5) inset;font-size: 17px;line-height: 1.38;color: rgb(0, 0, 0);resize: none; margin:30px;padding:10px;" 
-				placeholder="Enter Particulars for this transaction"></textarea> 
-				<textarea style="font-weight:700; height: 100px;width:400px; border: 1px solid rgb(119, 119, 119);background-color: rgb(242, 242, 242);
-				box-shadow: 1px -3px 5px rgba(0, 0, 0, .5) inset;font-size: 17px;line-height: 1.38;color: rgb(0, 0, 0);resize: none; margin:30px; padding:10px;" 
-				placeholder="Enter comments for this transaction"></textarea> 
-				
-				
-				<input style="height:50px;  width: 21.3197969543%;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
-				box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px;padding:10px;" 
-				placeholder="Issued Quantity" type="text">
-				<input style="height:50px;  width: 21.3197969543%;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
-				box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px;padding:10px; "
-				placeholder="Received Quantity" type="text">
-				
+				<table align="center" style="margin: 0px auto;">
+				<tr>
+				<td>
+					<textarea style="font-weight:700; height: 100px;width:400px; border: 1px solid rgb(119, 119, 119);background-color: rgb(242, 242, 242);
+					box-shadow: 1px -3px 5px rgba(0, 0, 0, .5) inset;font-size: 17px;line-height: 1.38;color: rgb(0, 0, 0);resize: none; margin:30px;padding:10px;" 
+					placeholder="Enter Particulars for this transaction"></textarea> 
+				</td>
+				<td>
+					<textarea style="font-weight:700; height: 100px;width:400px; border: 1px solid rgb(119, 119, 119);background-color: rgb(242, 242, 242);
+					box-shadow: 1px -3px 5px rgba(0, 0, 0, .5) inset;font-size: 17px;line-height: 1.38;color: rgb(0, 0, 0);resize: none; margin:30px; padding:10px;" 
+					placeholder="Enter comments for this transaction"></textarea>
+				</td>					
+				</tr>
+				<tr>
+				<td style="text-align:center">
+					<input style="height:50px; font-weight:700 ;   padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
+					box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px;padding:10px;" 
+					placeholder="Issued Quantity" type="text">
+				</td>
+				<td style="text-align:center">
+					<input style="height:50px; font-weight:700 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
+					box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px;padding:10px; "
+					placeholder="Received Quantity" type="text">
+				</td>
+				</tr>
+				</table>
 				<hr />
 			
-			<p  style="text-align:center ! important;color: rgb(22, 119, 248);padding-top:10px;font-size: .889em;font-weight: 700;
-				letter-spacing: 1px;"  > Optional Details </h2>
+			<p  style="text-align:center ! important;color: rgb(22, 119, 248);padding-top:1px;font-size: .889em;font-weight: 700;
+				letter-spacing: 1px;"  > Optional Details </p>
+					
+<br />
+
+<table align="center" style="margin: 0px auto;" >
+<tr>
+<td style="text-align:center;">
+				<select  id="selectSupplier" onchange="supplierChanged(this.options[this.selectedIndex].text)" class="_select _select-1"
+	  name="Select Item" style="margin:10px;width:400px !important;font-size:16px;font-weight:700;">
+	  <?php
+					// Load field datas into List box
+					$cn=mysql_connect("localhost",root) or die("Note: " . mysql_error());
+					
+					$res=mysql_select_db("stockmanagement",$cn) or die("Note: " . mysql_error());
+					
+					$res_supplier=mysql_query("select * from supplierlist;") or die("Note: " . mysql_error());
+				?>
 				
-				<br />
-				<select id="seelc" onchange="itemchanged(this.options[this.selectedIndex].text)	" class="_select _select-1"
-	  name="Select Item" style="margin-top:40px;align:center;width:400px !important;font-size:16px;font-weight:700">
-	  
 					<option  style="font-size:14px" value="Select Item" > Select Supplier </option>
-				</select>
-				<br />
+					
+					<?php
+						while($row = mysql_fetch_array($res_supplier))
+						{
+							echo "<option style=\"font-size:14px\"  value=" .$row['supplierName'] . ">" . $row['supplierName'] . "</option>";
+						}
+					echo "</select> "
+					?>
+</td>
+</tr>
+</table>
 				
+		
+	
+			<table  align="center" style="margin: 0px auto;">
+		<tr>
+		<td style="text-align:center;">
+					<input style="height:50px; font-weight:700 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
+					box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px;padding:10px; "
+					placeholder="Unit Price" type="text">
+				</td>
+		<td style="text-align:center;">
+					<input style="height:50px; font-weight:700 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
+					box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px;padding:10px; "
+					placeholder="Unit Price" type="text">
+				</td>
+	<td style="text-align:center;">
+					<input style="height:50px; font-weight:700 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
+					box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px;padding:10px; "
+					placeholder="Unit Price" type="text">
+				</td>
+		</tr>
+		<tr>
+		<td style="text-align:center;" colspan="4">
+					<input style="height:50px; font-weight:700 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
+					box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px;padding:10px; "
+					placeholder="Unit Price" type="text">
 				
+		</tr>
+		</table>
 			</div>
 		</div>
 	  <a href="#popDiv"> <button onClick="pop('popDiv')" class="_button "  type="submit"><span class="placeholder">Submit</span></button></a>
