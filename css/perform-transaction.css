@@ -126,15 +126,12 @@ padding-left:15%;
 }
 
 ._button {
-  display: block;
+  display: inline;
   position: relative;
-  float: left;
-  clear: both;
-  z-index: 25;
+
   width: 9.265625%;
   height: 49px;
-  margin: 23px 0 0 46.73438%;
-  margin-top : 80px;
+  margin: 23px 0 10 46.73438%;
   border-radius: 6px;
   background-color: rgba(224, 23, 23, 0.85);
   box-shadow: 4px 4px 5px rgba(13, 13, 13, 0.5);
@@ -209,7 +206,8 @@ width:220px;
 
 .container ._container {
 	width: 102.249134948%;
-	height: 803px;
+	min-height: 100px;
+	overflow: hidden;
 	margin: -5px 0 0 -0.95156%;
 	border-radius: 7px;
 	background-color: rgb(255, 255, 255);

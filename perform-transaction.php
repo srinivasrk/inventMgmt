@@ -135,14 +135,15 @@ function checkavail()
   <a class="text text-2" href="#">Stock Management Suite</a>
   <div class="element _element element-1"></div>
   <a class="uniqueitem uniqueitem-1" href="#">Unique Items</a>
-  <a class="uniqueitem uniqueitem-2" href="#">Perform Transaction</a>
+  <a class="uniqueitem uniqueitem-2" href="perform-transaction.php">Perform Transaction</a>
   <a class="uniqueitem uniqueitem-3" href="#">Departments/Lab's</a>
   <a class="uniqueitem uniqueitem-4" href="#">Supplier List</a>
   <a class="uniqueitem uniqueitem-5" href="#">Request for stock</a>
-  <div class="container _container clearfix">
-    <div class="element _container clearfix">
+  <div class="container _container clearfix"  >
+    <div class="element _container clearfix" >
       <select id="selectitem" onchange="itemchanged(this.options[this.selectedIndex].text)	" class="_select _select-1"
 	  name="Select Item" style="width:400px !important;font-size:16px;font-weight:700">
+	 
 	  <?php
 		// Load field datas into List box
 		$cn=mysql_connect("localhost",root) or die("Note: " . mysql_error());
@@ -265,8 +266,9 @@ function checkavail()
 				
 			</div>
 		</div>
-	 <a href="#popDiv"> <button onClick="pop('popDiv')" class="_button " type="submit"><span class="placeholder">Submit</span></button></a>
+	  <a href="#popDiv"> <button onClick="pop('popDiv')" class="_button "  type="submit"><span class="placeholder">Submit</span></button></a>
     </div>
+	
   </div>
   
   <footer style="margin-top:3%;" class="_container _container-4 clearfix">
