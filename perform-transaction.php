@@ -6,6 +6,137 @@
   <link rel="stylesheet" href="css/standardize.css">
   <link rel="stylesheet" href="css/perform-transaction-grid.css">
   <link rel="stylesheet" href="css/perform-transaction.css">
+  
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+    $( document ).ready(function() {
+       window.onbeforeunload = function() {
+    return "Leaving this page will reset the wizard";
+		};
+		
+		$("#make").blur(function(){
+			if($(this).val().length > 0)
+		{
+		
+			$("#makelbl").addClass("intro");
+		}
+		else{
+			
+			$("#makelbl").removeClass("intro");
+		}
+		});
+		$("#model").blur(function(){
+			if($(this).val().length > 0)
+		{
+		
+			$("#modellbl").addClass("intro");
+		}
+		else{
+			
+			$("#modellbl").removeClass("intro");
+		}
+		});
+		$("#serialNumber").blur(function(){
+			if($(this).val().length > 0)
+		{
+		
+			$("#serialNumberlbl").addClass("intro");
+		}
+		else{
+			
+			$("#serialNumberlbl").removeClass("intro");
+		}
+		});
+		$("#accessories").blur(function(){
+			if($(this).val().length > 0)
+		{
+		
+			$("#accessorieslbl").addClass("intro");
+		}
+		else{
+			
+			$("#accessorieslbl").removeClass("intro");
+		}
+		});
+		$("#itemSpecification").blur(function(){
+			if($(this).val().length > 0)
+		{
+		
+			$("#itemspeclbl").addClass("intro");
+		}
+		else{
+			
+			$("#itemspeclbl").removeClass("intro");
+		}
+		});
+		$("#remarks").blur(function(){
+			if($(this).val().length > 0)
+		{
+		
+			$("#remarkslbl").addClass("intro");
+		}
+		else{
+			
+			$("#remarkslbl").removeClass("intro");
+		}
+		});
+	$("#unitPrice").blur(function(){
+			if($(this).val().length > 0)
+		{
+		
+			$("#unitPricelbl").addClass("intro");
+		}
+		else{
+			
+			$("#unitPricelbl").removeClass("intro");
+		}
+		});
+		
+	$("#invoiceNumber").blur(function(){
+		if($(this).val().length > 0)
+		{
+		
+			$("#invoiceNumberlbl").addClass("intro");
+		}
+		else{
+			
+			$("#invoiceNumberlbl").removeClass("intro");
+		}
+		});
+	$("#invoiceDate").blur(function(){
+		if($(this).val().length > 0)
+		{
+		
+			$("#invoiceDatelbl").addClass("intro");
+		}
+		else{
+			
+			$("#invoiceDatelbl").removeClass("intro");
+		}
+	});
+	$("#taxInPercent").blur(function(){
+		if($(this).val().length > 0)
+		{
+		
+			$("#taxlbl").addClass("intro");
+		}
+		else{
+			
+			$("#taxlbl").removeClass("intro");
+		}
+	});
+    });
+ 
+ 
+   
+    </script>
+	
+	
+	<style>
+.intro {
+	display:block;
+}
+</style>
   <script type="text/javascript">
 		function pop(div) {
 			document.getElementById(div).style.display = 'block';
@@ -24,9 +155,9 @@
 		}
 		}
 	};
-			
-			
-		</script>
+		
+
+</script>
   <script type="text/javascript">
   var res;
 	function itemchanged(val){
@@ -141,7 +272,7 @@ function checkavail()
   <a class="text text-2" href="#">Stock Management Suite</a>
   <div class="element _element element-1"></div>
   <a class="uniqueitem uniqueitem-1" href="#">Unique Items</a>
-  <a class="uniqueitem uniqueitem-2" href="perform-transaction.php">Perform Transaction</a>
+  <a class="uniqueitem uniqueitem-2" href="#">Perform Transaction</a>
   <a class="uniqueitem uniqueitem-3" href="#">Departments/Lab's</a>
   <a class="uniqueitem uniqueitem-4" href="#">Supplier List</a>
   <a class="uniqueitem uniqueitem-5" href="#">Request for stock</a>
@@ -221,19 +352,63 @@ function checkavail()
 		
       </select>
 	 
-	 <h2 id="stockavail" style="width:auto;display:block;margin-top:23%;
+	 <h2 id="stockavail" style="width:auto;display:block;margin-top:20%;
 		margin-left:90px;font-size: 16px;font-weight: 700;text-align:center;
 		;color: rgb(0, 0, 0);">  </h2>
 		
-      <div class="element _element"></div>
+     <hr />
 	  
-      <p class="text _text">Optional Details :</p>
-      <input class="_input _input-1" placeholder="Make" type="text">
-      <input class="_input _input-2" placeholder="Model" type="text">
-      <input class="_input _input-3" placeholder="Serial Number" type="text">
-      <textarea class="_textarea _textarea-1" placeholder="Accessories"></textarea>
-      <textarea class="_textarea _textarea-2" placeholder="Item Specification"></textarea>
-      <textarea class="_textarea _textarea-3" placeholder="Remarks"></textarea>
+      <p class="text _text">: Optional Details :</p>
+	<br />
+	<br />
+<br />
+			<table align="center" style="margin: 0px auto;">
+			<tr>
+			<td>
+				<input id="make" style=" display:block;height:50px; font-weight:700 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
+								box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px; padding-bottom:0px;margin-bottom:2px;"
+								placeholder="Make" type="text">
+								<p class="lblvisible" id="makelbl" style="text-align:center"> Make </p>
+			</td>
+			<td>
+			<input id="model" style=" display:block;height:50px; font-weight:700 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
+								box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px; padding-bottom:0px;margin-bottom:2px;"
+								placeholder="Model" type="text">
+								<p class="lblvisible" id="modellbl" style="text-align:center"> Model </p>
+			</td>
+			<td>
+			<input id="serialNumber" style=" display:block;height:50px; font-weight:700 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
+								box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px; padding-bottom:0px;margin-bottom:2px;"
+								placeholder="Serail Number" type="text">
+								<p class="lblvisible" id="serialNumberlbl" style="text-align:center"> Serial Number </p>
+			</td>
+			</tr>
+		<tr>
+		<td>
+		<textarea id="accessories" style=" display:block;height: 78px; font-weight:700 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
+								box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px; padding-bottom:0px;margin-bottom:2px;line-height: 1.38;;"
+								placeholder="Accessories" type="text"></textarea>
+								<p class="lblvisible" id="accessorieslbl" style="text-align:center"> Any additional Accessories </p>
+			</td>
+			<td>
+		<textarea id="itemSpecification" style=" display:block;height: 78px; font-weight:700 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
+								box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px; padding-bottom:0px;margin-bottom:2px;line-height: 1.38;;"
+								placeholder="Item Specification" type="text"></textarea>
+								<p class="lblvisible" id="itemspeclbl" style="text-align:center"> Item Specification</p>
+			</td>
+			<td>
+		<textarea id="remarks" style=" display:block;height: 78px; font-weight:700 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
+								box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px; padding-bottom:0px;margin-bottom:2px;line-height: 1.38;;"
+								placeholder="Remarks" type="text"></textarea>
+								<p class="lblvisible" id="remarkslbl" style="text-align:center"> Remarks (Anything specific to item) </p>
+			</td>
+		
+		</tr>
+
+			</table>
+	
+	
+	 
 	  <div id="popDiv" class="ontop">
 			<div style=" border: 1px solid #000; "  id="popup">
 				<p  style="text-align:center ! important;color: rgb(22, 119, 248);padding-top:50px;font-size:20px;font-weight: 700;
@@ -305,29 +480,46 @@ function checkavail()
 			<table  align="center" style="margin: 0px auto;">
 		<tr>
 		<td style="text-align:center;">
-					<input style="height:50px; font-weight:700 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
-					box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px;padding:10px; "
+					<input id="unitPrice" style="height:50px; font-weight:700 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
+					box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px; padding-bottom:0px;margin-bottom:2px; "
 					placeholder="Unit Price" type="text">
+					<p class="lblvisible" id="unitPricelbl"> Unit Price </p>
 				</td>
 		<td style="text-align:center;">
-					<input style="height:50px; font-weight:700 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
-					box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px;padding:10px; "
-					placeholder="Unit Price" type="text">
+					<input id="invoiceNumber" style="height:50px; font-weight:700 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
+					box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px;padding:10px;margin-bottom:2px;"
+					placeholder="Invoice Number" type="text">
+						<p class="lblvisible"id="invoiceNumberlbl"> Invoice Number </p>
 				</td>
 	<td style="text-align:center;">
-					<input style="height:50px; font-weight:700 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
-					box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px;padding:10px; "
-					placeholder="Unit Price" type="text">
+					<input id="invoiceDate" style="height:50px; font-weight:600 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
+					box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 15px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px;padding:10px;margin-bottom:2px; "
+					placeholder="Invoice Date(dd/mm/yy)" type="text">
+						<p  class="lblvisible"id="invoiceDatelbl"> Invoice Date (dd/mm/yy) </p>
 				</td>
+				<td style="text-align:center;" colspan="4">
+					<input id="taxInPercent" style="height:50px; font-weight:700 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
+					box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px;padding:10px;margin-bottom:2px; "
+					placeholder="Tax in Percent	" type="text">
+					<p class="lblvisible"id="taxlbl"> Tax in Percent </p>
+					</td>
 		</tr>
-		<tr>
-		<td style="text-align:center;" colspan="4">
-					<input style="height:50px; font-weight:700 ;  padding: 0 10px;  border-radius: 5px;  background-color: rgb(242, 242, 242);
-					box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.5) inset;font-size: 17px;line-height: 1.38;letter-spacing: 1px;color: rgb(0, 0, 0);margin:30px;padding:10px; "
-					placeholder="Unit Price" type="text">
-				
-		</tr>
+		
 		</table>
+		<table align="center" style="margin: 0px auto;" >
+			<tr>
+			<td style="text-align:center;">
+							<select  id="selectFunding" class="_select _select-1"
+				  name="Select Item" style="margin:10px;width:400px !important;font-size:16px;font-weight:700;">
+				  <option value="">Select type of Funding </option>
+				  <option value="College">College</option>
+				  <option value="MODROB">MODROB</option>
+				  <option value="VGST">VGST</option>
+				 </select>
+			</td>
+			</tr>
+			</table>
+		<button onClick="pop('popDiv')" class="_button "  type="submit"><span class="placeholder">Submit</span></button>
 			</div>
 		</div>
 	  <a href="#popDiv"> <button onClick="pop('popDiv')" class="_button "  type="submit"><span class="placeholder">Submit</span></button></a>

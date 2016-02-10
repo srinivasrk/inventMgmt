@@ -110,7 +110,13 @@ body {
 				
 			
 			}
-		
+.lblvisible{
+	display:none;
+	color:#3090C7;
+	font-size:14px;
+	font-weight:600;
+	margin-bottom:20px;
+}	
 .first-half {
 	
 padding-left:15%;
